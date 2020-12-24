@@ -12,3 +12,11 @@ sudo apt-key fingerprint ABF5BD827BD9BF62
 
 sudo apt update
 sudo apt install nginx
+sudo service nginx start
+
+cp ./appPanadoc.conf /etc/nginx/sites-enabled/appPanadoc.conf
+cp ./panadoc.conf /etc/nginx/sites-enabled/panadoc.conf
+
+cp ./proxy_params /etc/nginx/proxy_params
+
+sudo service nginx reload
